@@ -26,7 +26,7 @@ const say = (x) => {
 
 
 const tiktak = () => {
-    const tik = new Audio('tik.mp3')
+    const tik = new Audio('tik.wav')
     tik.play()
 }
 
