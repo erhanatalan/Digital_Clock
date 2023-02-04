@@ -34,11 +34,11 @@ const say = (x) => {
 //     btn.click()
 // })
 
-btn.addEventListener("click", () => {
-    // let audio = new Audio("tik.mp3")
-    // audio.play()
-    btn.play()
-})
+// btn.addEventListener("click", () => {
+//     let audio = new Audio("tik.mp3")
+//     audio.play()
+//     btn.play()
+// })
 
 
 
