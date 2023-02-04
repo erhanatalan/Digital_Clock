@@ -9,9 +9,15 @@
 </head>
 <body>
     <div id="clock">
-        <p class="date">{{ date }}</p>
-        <p class="time">{{ time }}</p>
-        <p class="gun">{{ day }}</p>
+        <p class="date">date</p>
+        <p class="time">time</p>
+        <p class="gun">day</p>
+        <div class="screet">
+            <!-- <button id="play"></button> -->
+            <audio id="myAudio" controls preload="auto">
+                <source src="tik.mp3" type="audio/mpeg">
+            </audio>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>

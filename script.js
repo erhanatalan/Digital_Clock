@@ -1,11 +1,15 @@
 const date = document.querySelector(".date")
 const time = document.querySelector(".time")
 const gun = document.querySelector(".gun")
+const body = document.querySelector("body")
+const btn = document.getElementById("myAudio")
+// const btn = document.getElementById("play")
+
 
 
 const digitalClock = () => {
-
     let now = new Date()
+
     let guun = now.toLocaleDateString().split("/")[1]
     let ay = now.toLocaleDateString().split("/")[0]
     let yil = now.toLocaleDateString().split("/")[2]
@@ -15,6 +19,7 @@ const digitalClock = () => {
     gun.innerHTML = gunler[now.getDay()];
 
     time.innerHTML = say(now.toLocaleTimeString());
+    setInterval(digitalClock, 1000)
 }
 
 const say = (x) => {
@@ -25,12 +30,22 @@ const say = (x) => {
 }
 
 
-const tiktak = () => {
-    const tik = new Audio('tik.wav')
-    tik.play()
-}
+// body.addEventListener("onpageshow", () => {
+//     btn.click()
+// })
 
-setInterval(tiktak, 60000)
-tiktak()
-setInterval(digitalClock, 1000)
+btn.addEventListener("click", () => {
+    // let audio = new Audio("tik.mp3")
+    // audio.play()
+    btn.play()
+})
+
+
+
+// let tiktak = () => {
+//     let tik = new Audio('tik.mp3')
+//     tik.play()
+//     setInterval(tiktak, 60000)
+// }
+
 digitalClock()
